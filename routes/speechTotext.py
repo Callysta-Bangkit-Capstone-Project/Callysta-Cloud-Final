@@ -5,7 +5,8 @@ from flask_restx import Resource, fields, Namespace
 from app.extensions import api
 from models.audio_preprocess import convert_to_mono
 
-router = api.namespace('api', description='Semua Endpoint yang digunakan untuk aplikasi ini')
+router = Namespace('api', description='Semua Endpoint yang digunakan untuk aplikasi ini')
+
 
 # Load the speech project service account credentials
 client_file = 'utils/speech_credentials.json'
@@ -38,7 +39,7 @@ class Speech_to_text(Resource):
         # Configure the recognition
         config = speech.RecognitionConfig(
             encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
-            sample_rate_hertz=16000,
+            sample_rate_hertz=48000,
             language_code='id-ID'
         )
 
@@ -52,5 +53,5 @@ class Speech_to_text(Resource):
             transcriptions.append(transcription)
 
         # Return the transcriptions as JSON
-        return jsonify({'transcriptions': transcriptions}), 200
+        return {'transcriptions': transcriptions}, 200
 

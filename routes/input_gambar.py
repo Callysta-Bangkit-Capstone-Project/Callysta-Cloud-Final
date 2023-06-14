@@ -7,7 +7,7 @@ import numpy as np
 import string
 
 # Define the model for a user
-router = api.namespace('api', description='Semua Endpoint yang digunakan untuk aplikasi ini')
+router = Namespace('api', description='Semua Endpoint yang digunakan untuk aplikasi ini')
 
 @router.route('/')
 class InputGambar(Resource):
