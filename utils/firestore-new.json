@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "speech-project-389108",
+  "private_key_id": "996d5b67e80fd4c460e2430331f0f551bea5ad08",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC7+MsTxwcd5KxV\nQIYksCaQAJBv4CbYHBn2T4Hf6WymG5RTo/5LM+f2s3e4n9YLxMjwz0bVMTLoIkAX\niNjSf2HFB9x2dzo9OEhrT044Wk3u6+cRf7h9kKyXFWwXy7hqF+zxpqJchXckksSg\nCYDj50WNFvzLFHAKuHRxciyNLc+YQlO5bxDPunpq3SOt4aoH+wScd12HUZaBjPJQ\nUcPlWKvsYZdTJ/w3Hxaiol8XM9d2oIwbU+aZtJhZXWctHVC2dbBdxdaDYb0YbATn\nZmUA8HRXMSTQeoRrkp1G2zem9d0DHd9EyooYhY5pT96sBc64gRRpTbnneNbd92V5\nzvToFsERAgMBAAECggEACN5EVvnXq6zwZjqDxab3n8k+B0AxFvau8SJnxUSMESNp\nll9dIcdIcyi9Dg1g7efWJtnRnMDsJtxoT4/v0lELD96Ww7JM8arWTFVG0oTsqrgv\nm/FNlwN4iA19PrtoVz2LGszGudScZhHkU8xU+9ObQfx+11Yu0cupZzmIsW2zDsrj\n8F58TPG77dEBrzfEUBXN4dKj7499A1+Z9qzTk4NnlKpZ+Y5/j7StNiSKpLquphBM\n+z2bzYTYQFckXX5F+upS2j8PMqH4ndsUtMOBfz1B0/Ak9Ie3ZiZ2BZCYvvtwZ0f0\nHVKj3mKJA/9hXa9eBXJTWQ1SVm9xR8sG1A68StXbAQKBgQD4XqFAj0jU7P/YQy6O\nJyJiFGIjYQxzPkjFks+h/ywExrZUxRp0wCEcOdDRTT9iVix1LuorUTu4iA+NnjL3\nzkDjFKDO5hEG9XSWxJT6hme8vkFswhT8gRiBhVV+qCYHxaCd0EggeePAGcH69xHt\n6I8c5ZmLGgDxlR/wY+LeCPDMEQKBgQDBvyYKDJRpGnPWm/uZc16x0/VZmGfKx+QL\n7h8s8zteBv5W3PBeulJeoNRtkwjCANBnQLu3eWm/L5IrqPQhOLNAJiUPbD6i2V7T\nsWaqR02+z3Rl5ITIK+W78CsHtlhI+ILo9FH2CM4eznKdRJbsL69/qsT+js9bXkqZ\n2wiRbK+lAQKBgCm6pHcXW9JCe33XU8QYeSNnb1GoZZIbPdjMIMyD9d5bkJjPgPFq\nsmVupVH1G5gnCFMr7bYXcORBH/PYR5Hw+l/swFPivaugo9UM9EbfPCCvCoj+Vs5R\n1k80mresAq+9mY3KR8QFFqnY6gmDZ2TEdP8S6GhBlzT/rB0UezJ46BQxAoGAGEw7\nngkD18aMfn6jaBQy7QRTAcB+S80TyXc8i6uZZ2pjHUuqDYc6a0mqOm+1Kndlq31P\nzWu5mlOB9l3C+COfP01JWozNsiimns/huzskAekMhPbKvDvdHNu62cXBfq1D5ak2\nWi+ygeSMNTLz5nz4en9VI0OPt7q0imUQxwQlZwECgYBCDXJ0fAZMc2yo8JUEakbL\ntDWnWggBy+iKdXhorDbFLQOK0anlkanrOD5Jtlz+k2UXzE9wwsFxNRGB9hjxPIQY\naYOTYMPhdd19gbDUpnLIMJ/82Ct+oJDoSKaJMIeF+MNEgNW21OV11vcj5U+1AM53\n6KiR9j9Nm9qwQu5pH8egvg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firestore@speech-project-389108.iam.gserviceaccount.com",
+  "client_id": "116236361880268428885",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firestore%40speech-project-389108.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
