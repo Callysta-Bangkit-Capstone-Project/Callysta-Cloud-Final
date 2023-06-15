@@ -1,15 +1,18 @@
-FROM alpine:latest
+FROM python:3.9-buster
 
-RUN apk add --no-cache python3-dev \
-    && python3 -m ensurepip \
-    && pip3 install --upgrade pip
+ENV PYTHONDONTWRITEBYTECODE = 1
+ENV PYTHONUNBUFFERED = 1
+ENV FLASK_APP = app.py
+ENV FLASK_ENV = development
 
-WORKDIR /app
+RUN python3 --version
+RUN pip3 --version
 
 COPY . /app
+WORKDIR /app
 
-RUN pip3 --no-cache-dir install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
+RUN apt-get install openssl
 
-EXPOSE 5000
-
-CMD ["python3", "app.py"]
+EXPOSE 80
+CMD [ "gunicorn", "-bind", "0.0.0.0:80", "--timeout", "90", "app:app" ]

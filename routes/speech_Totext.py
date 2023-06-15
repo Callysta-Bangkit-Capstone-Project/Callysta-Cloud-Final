@@ -4,11 +4,9 @@ from google.cloud import speech
 from server.extensions import api
 from flask_restx import Resource, fields, Namespace
 from models.audio_preprocess import convert_to_mono
-from server.extensions import api
 
-
-# Define the model for a user
 router = Namespace('api', description='Semua Endpoint yang digunakan untuk aplikasi ini')
+
 
 # Load the speech project service account credentials
 client_file = 'utils/speech_credentials.json'
@@ -40,11 +38,10 @@ class SpeechTotextController(Resource):
 
         # Configure the recognition
         config = speech.RecognitionConfig(
-            encoding=speech.RecognitionConfig.AudioEncoding.AMR_WB,
-            sample_rate_hertz=16000,
+            encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
             language_code='id-ID',
-            model= 'phone_call',
-            profanity_filter=True,
+            audio_channel_count=1,
+            enable_automatic_punctuation=True
         )
 
         # Perform the speech recognition
