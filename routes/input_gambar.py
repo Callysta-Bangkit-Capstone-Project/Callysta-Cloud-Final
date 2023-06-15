@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_restx import Resource, fields, Namespace
 from models.image_preprocess import preprocess_image
-from app.extensions import api
+from server.extensions import api
 from keras.models import load_model
 import numpy as np
 import string
@@ -10,7 +10,7 @@ import string
 router = Namespace('api', description='Semua Endpoint yang digunakan untuk aplikasi ini')
 
 @router.route('/')
-class InputGambar(Resource):
+class InputGambarController(Resource):
     @api.doc(responses={200: 'Success', 400: 'Invalid Request'})
     @api.expect(api.model('InputGambar', {'image': fields.String(required=True), 'actual-answer': fields.String(required=True)}))
     def post(self):
@@ -26,6 +26,7 @@ class InputGambar(Resource):
 
         # Make the prediction using the loaded model
         prediction_index = np.argmax(model.predict(final_image))
+        print(prediction_index)
         alphabets = string.ascii_uppercase
         prediction_label = alphabets[prediction_index]
 
