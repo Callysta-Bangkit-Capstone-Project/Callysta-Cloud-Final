@@ -1,7 +1,7 @@
 from server.extensions import api
 from flask_restx import Resource, fields, Namespace
-from flask import Flask, jsonify, request
-
+from flask import Flask, jsonify
+import requests
 
 # Define the model for a user
 router = Namespace('api', description='Semua Endpoint yang digunakan untuk aplikasi ini')
