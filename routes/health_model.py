@@ -10,7 +10,7 @@ class HealthCheck(Resource):
         ml_api_url = 'https://asia-southeast2-callysta-api.cloudfunctions.net/function-2'
         response = requests.get(ml_api_url)
         try:
-            result = response.data()
+            result = response.json()
             return jsonify({'status': 'healthy', 'result': result})
         except json.JSONDecodeError as e:
             return jsonify({'status': 'unhealthy', 'error': str(e)})
