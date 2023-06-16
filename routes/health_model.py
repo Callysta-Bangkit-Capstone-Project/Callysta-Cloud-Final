@@ -7,7 +7,7 @@ router = Namespace('api', description='Semua Endpoint yang digunakan untuk aplik
 @router.route('/')
 class HealthCheck(Resource):
     def get(self):
-        ml_api_url = 'https://asia-southeast1-callysta-api.cloudfunctions.net/function-1'
+        ml_api_url = 'https://asia-southeast2-callysta-api.cloudfunctions.net/function-2'
         response = requests.get(ml_api_url)
         
         if response.status_code == 200:

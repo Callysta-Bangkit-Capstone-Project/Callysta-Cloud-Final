@@ -18,7 +18,7 @@ class InputGambarController(Resource):
     @api.doc(responses={200: 'Success', 400: 'Invalid Request'})
     @api.expect(model)
     def post(self):
-        ml_api_url = 'https://asia-southeast1-callysta-api.cloudfunctions.net/function-1'
+        ml_api_url = 'https://asia-southeast2-callysta-api.cloudfunctions.net/function-2'
         payload = {
             "image": request.json['image'],
             "actual-answer": request.json['actual-answer']
