@@ -40,8 +40,16 @@ class SpeechTotextController(Resource):
         config = speech.RecognitionConfig(
             encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
             language_code='id-ID',
-            audio_channel_count=1,
-            enable_automatic_punctuation=True
+            enable_automatic_punctuation=True,
+            enable_spoken_punctuation=True,
+            model='default',
+            speech_contexts=[speech.SpeechContext(
+                phrases=[
+                    'callysta', 'ridho', '$FULLPHONENUM', '$OOV_CLASS_AM_RADIO_FREQUENCY',
+                    '$OOV_CLASS_FM_RADIO_FREQUENCY', '$OOV_CLASS_OPERAND', '$OOV_CLASS_PHONE_NUMBER',
+                    '$OOV_CLASS_TEMPERATURE', '$ADDRESSNUM', '$DAY', '$MONEY', '$MONTH', '$TIME'
+                ]
+            )]
         )
 
         # Perform the speech recognition
