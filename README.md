@@ -12,6 +12,7 @@ Our team Consist of 6 people.
   - [What is this?](#what-is-this)
   - [Getting started](#getting-started)
   - [Deployment to app engine](#deployment-to-app-engine)
+  - [Deployment ML model to Cloud Function](#deployment-ml-model-to-cloud-function)
 
 ## Members
 
