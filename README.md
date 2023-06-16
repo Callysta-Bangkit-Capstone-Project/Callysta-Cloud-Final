@@ -8,14 +8,10 @@ This is our repository for Company Based Capstone.
 Our team Consist of 6 people.
 
 - [Bangkit-C22CB-Company-Based-Capstone](#bangkit-c22cb-company-based-capstone)
-  - [Members](#Members)
-  - [What is this? (*coming soon*)](#what-is-this-coming-soon)
-  - [Editing Architecture Chart](#editing-architecture-chart)
-  - [Running Our Project in Local](#running-our-project-in-local)
-    - [Using Conda (easier to build)](#using-conda-easier-to-build)
-    - [Using PIP (not recommended, still experimental)](#using-pip-not-recommended-still-experimental)
-  - [Our ML model result uploaded to Huggingface.co](#our-ml-model-result-uploaded-to-huggingfaceco)
-  - [References](#references)
+  - [Members](#members)
+  - [What is this?](#what-is-this)
+  - [Getting started](#getting-started)
+  - [Deployment to app engine](#deployment-to-app-engine)
 
 ## Members
 
@@ -29,56 +25,70 @@ Ridho Kartoni Pasaribu | C013DSX0978 | Cloud Computing | [Profile](https://githu
 Ruben Tricahya Boediono | C038DSX0600 | Cloud Computing | [Profile](https://github.com/rubenboediono)
 
 
-## What is this? (*coming soon*)
+## What is this? 
 
-TBA
+This repository contains a Flask API that is deployed on Google App Engine. The API provides functionality for interacting with the specified endpoints using HTTP requests. The code is built with Python and utilizes the Flask web framework.
 
-## Editing Architecture Chart
+## Getting started
 
-Use [Draw.IO]([https://link](https://app.diagrams.net/)) to create our architecture chart, use this VScode Extension to edit our diagram inside the editor: [Draw.io Integration in VSCode](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
-
-## Running Our Project in Local
-
-### Using Conda (easier to build)
-
-if you are using conda, you can install our project using the following command:
-
+1. Clone the repository to your local machine
 ```bash
-conda create --name bangkit_capstone python=3.9
-conda activate bangkit_capstone
-pip install ipykernel
+git clone https://github.com/Callysta-Bangkit-Capstone-Project/Callysta-CloudComputing.git
+
 ```
-
-or this command if you are want to specify the path of the environment
-
+2. Navigate to the project directory:
 ```bash
-conda create --prefix ./venv/ python=3.9
-conda activate ./venv/
-pip install ipykernel
+cd Callysta-CloudComputing
+
 ```
-
-### Using PIP (not recommended, still experimental)
-
-It's advised for machine learning aspect to use virtual environment to working with this project, this is to prevent incompatibilities with other contributors.
-
-If you are still activate Conda, you can deactivate it by typing `conda deactivate`.
-
-in the repo's directory, run the following commands one by one:
-
+3. Create a virtual environment to isolate the project dependencies:
 ```bash
-python3 -m pip install --upgrade pip
-python3 -m venv venv
-source venv/bin/activate | source venv/Scripts/activate
+python -m venv callysta-env
+
+```
+4. Activate the virtual environment
+On MacOs/Linux
+```bash
+source callysta-env/bin/activate
+
+```
+On Windows
+```bash
+callysta-env/Scripts/activate
+
+```
+5. Install the required dependencies by running the following command
+```bash
 pip install -r requirements.txt
+
+```
+6. Set up the necessary configurations for deploying to Google App Engine. Make sure you have a Google Cloud Platform project with the App Engine service enabled.
+
+7. Modify the app.yaml file to configure the App Engine deployment settings, such as the runtime, environment variables, and other configurations specific to your application.
+
+8. Run the Flask API locally by executing the following command:
+```bash
+python main.py
+
+```
+9. This will start the development server at http://localhost:8080/.
+
+## Deployment to App Engine
+1. Ensure you have the Google Cloud SDK installed on your machine.
+
+2. Set up your Google Cloud project and configure the project ID:
+```bash
+gcloud config set project PROJECT_ID
+
+```
+3.  Deploy the application to App Engine using the following command:
+```bash
+gcloud app deploy
+
 ```
 
-## Our ML model result uploaded to Huggingface.co
+4. Once the deployment is complete, you can access your API at 
+https://YOUR_PROJECT_ID.uc.r.appspot.com/
 
-Here's our working model result uploaded to Huggingface.co
-[bert-uncased-finetuned-squad-indonesian](https://huggingface.co/Andaf/bert-uncased-finetuned-squad-indonesian?context=makanan+favorit+dita+adalah+spaghetti&question=apa+makanan+favorit+dita)
 
-## References
 
-- [TensorFlow and Transformers (Medium)](https://towardsdatascience.com/tensorflow-and-transformers-df6fceaf57cc)
-- [AjulorC's question answering bot](https://huggingface.co/spaces/AjulorC/question_answering_bot_deployed_with_Gradio)
-- [Smaller, faster, cheaper, lighter: Introducing DistilBERT, a distilled version of BERT](https://medium.com/huggingface/distilbert-8cf3380435b5)
