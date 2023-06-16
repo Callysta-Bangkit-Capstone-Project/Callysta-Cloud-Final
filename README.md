@@ -5,7 +5,7 @@ This is our repository for Company Based Capstone.
 
 Our team Consist of 6 people.
 
-- [Bangkit-C22CB-Company-Based-Capstone](#bangkit-c22cb-company-based-capstone)
+- [Bangkit-C23-PS363-Company-Based-Capstone](#bangkit-c23-ps363-company-based-capstone)
   - [Members](#members)
   - [What is this?](#what-is-this)
   - [Getting started](#getting-started)
