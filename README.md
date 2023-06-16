@@ -1,4 +1,4 @@
-# Bangkit-C22CB-Company-Based-Capstone
+# Bangkit-C23-PS363-Product-Based-Capstone
 
 
 This is our repository for Company Based Capstone.
