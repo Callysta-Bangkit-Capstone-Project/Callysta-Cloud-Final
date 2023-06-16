@@ -90,5 +90,17 @@ gcloud app deploy
 4. Once the deployment is complete, you can access your API at 
 https://YOUR_PROJECT_ID.uc.r.appspot.com/
 
+## Deployment ML model to Cloud Function
+1. Create a new Cloud Function in your Google Cloud project. Make sure you have the Cloud Functions API enabled
+2. Write a new function in the Cloud Function that will handle the prediction request from your Flask API
+3. Within the Cloud Function, load your trained machine learning model
+4. Implement the necessary code to preprocess the incoming request data from your Flask API and pass it to your machine learning model for prediction. Ensure that the response from the model is properly formatted for the API response
+5. Deploy the Cloud Function by running the deployment command specific to your cloud environment
+```bash
+gcloud functions deploy function-name --runtime RUNTIME --trigger-http
+
+```
+Replace function-name with the name you want to give to your Cloud Function and RUNTIME with the language or runtime you're using (e.g., python3.9).
+6. Once the Cloud Function is deployed, take note of the generated URL endpoint for the function
 
 
